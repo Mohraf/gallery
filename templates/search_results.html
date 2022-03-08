@@ -19,14 +19,34 @@
         <img src="{{image.url_to_image.url}}" class="card-img" alt="Image">
         <div class="card-body">
           <h5 class="card-title">{{image.name}}</h5>
-          <p class="card-text">{{image.description}}</p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">CATEGORY: {{image.category}}</li>
-          <li class="list-group-item">LOCATION: {{image.location}}</li>
-        </ul>
         <div class="card-body">
-          <a href="#" class="card-link">View Image</a>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{image.name}}">
+            View Image
+          </button>
+        </div>
+      </div>
+
+
+      <div class="modal" id="{{image.name}}" tabindex="-1" aria-labelledby="{{image.name}}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">{{image.name}}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="{{image.url_to_image.url}}" class="card-img" alt="Image">
+              <p>{{image.description}}</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">CATEGORY: {{image.category}}</li>
+                <li class="list-group-item">LOCATION: {{image.location}}</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     {% endfor %}

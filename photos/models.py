@@ -24,6 +24,12 @@ class Image(models.Model):
   def update_image(self):
     self.update()
 
+  
+  @classmethod
+  def get_all_images(cls):
+    images = cls.objects.all()
+    return images
+
 
   @classmethod
   def get_image_by_id(cls, id):

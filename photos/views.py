@@ -5,7 +5,11 @@ from .models import *
 
 # Create your views here.
 def home(request):
-  return render(request, 'index.html')
+  images = Image.get_all_images()
+  context ={
+    "images": images
+  }
+  return render(request, 'index.html', context)
 
 
 def search_images_by_category(request):
