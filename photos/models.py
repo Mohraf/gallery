@@ -1,3 +1,4 @@
+from email.policy import default
 from unicodedata import category
 from django.db import models
 
@@ -7,6 +8,10 @@ class Image(models.Model):
   description = models.CharField(max_length=200)
   category = models.ForeignKey('Category', on_delete=models.CASCADE)
   location = models.ForeignKey('Location', on_delete=models.CASCADE)
+  url_to_image = models.ImageField(upload_to="images/", default="image.png")
+
+  def __str__(self):
+    return self.name
 
 
 class Category(models.Model):
