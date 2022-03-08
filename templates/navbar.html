@@ -12,8 +12,8 @@
       <a class="navbar-brand" href="{% url 'home' %}">Gallery</a>
     </div>
 
-    <form class="d-flex" role="search" action="">
-      <input class="form-control me-2" name="article" type="search" placeholder="Search Category" aria-label="Search">
+    <form class="d-flex" role="search" action="{% url 'search_results'%}">
+      <input class="form-control me-2" name="image" type="search" placeholder="Search Category" aria-label="Search">
       <button class="btn btn-outline-secondary" type="submit">Search</button>
     </form>
   </div>
