@@ -1,5 +1,3 @@
-from email.policy import default
-from unicodedata import category
 from django.db import models
 
 # Create your models here.
@@ -12,6 +10,18 @@ class Image(models.Model):
 
   def __str__(self):
     return self.name
+  
+
+  def save_image(self):
+    self.save()
+
+
+  def delete_image(self):
+    self.delete()
+
+
+  def update_image(self, update_details):
+    self.update(update_details)
 
 
 class Category(models.Model):
