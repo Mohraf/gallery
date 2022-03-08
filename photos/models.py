@@ -28,5 +28,6 @@ class Category(models.Model):
     default=WILDLIFE,
   )
 
+
 class Location(models.Model):
   name = models.CharField(max_length=20)
