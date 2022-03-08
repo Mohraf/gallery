@@ -39,7 +39,7 @@ class Image(models.Model):
 
   @classmethod
   def search_images(cls, search_term):
-    images = cls.objects.filter(category=search_term)
+    images = cls.objects.filter(category__name__icontains=search_term)
     return images
   
 
@@ -51,22 +51,22 @@ class Image(models.Model):
 
 
 class Category(models.Model):
-  WILDLIFE = 'WL'
-  SPORTS = 'SP'
-  FOOD = 'FD'
-  PETS = 'PT'
+  # WILDLIFE = 'WL'
+  # SPORTS = 'SP'
+  # FOOD = 'FD'
+  # PETS = 'PT'
 
   category_choices = [
-    (WILDLIFE, 'Wildlife'),
-    (SPORTS, 'Sports'),
-    (FOOD, 'Food'),
-    (PETS, 'Pets'),
+    ('WILDLIFE', 'Wildlife'),
+    ('SPORTS', 'Sports'),
+    ('FOOD', 'Food'),
+    ('PETS', 'Pets'),
   ]
 
   name = models.CharField(
-    max_length=2,
+    max_length=8,
     choices=category_choices,
-    default=WILDLIFE,
+    default='WILDLIFE',
   )
 
 
