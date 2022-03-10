@@ -26,3 +26,6 @@ python manage.py runserver
 * Postgresql
 * Django
 * Heroku
+
+## Support and contact details
+amosokello04@gmail.com
