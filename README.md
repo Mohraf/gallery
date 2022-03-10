@@ -29,3 +29,7 @@ python manage.py runserver
 
 ## Support and contact details
 amosokello04@gmail.com
+
+### License
+This is under the [MIT](LICENSE) license
+Copyright (c) 2022 **Amos Okello**
