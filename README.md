@@ -12,3 +12,4 @@ git clone https://github.com/Mohraf/gallery.git
 ```
 * Open the folder with your favorite IDE
 * Create a virtual environment and activate it
+* install requirements
