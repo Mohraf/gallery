@@ -20,3 +20,9 @@ pip install -r requirements.txt
 ```
 python manage.py runserver
 ```
+
+## Technologies Used
+* Python
+* Postgresql
+* Django
+* Heroku
