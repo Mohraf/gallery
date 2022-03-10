@@ -16,3 +16,7 @@ git clone https://github.com/Mohraf/gallery.git
 ```
 pip install -r requirements.txt
 ```
+* Run the application using the following command
+```
+python manage.py runserver
+```
